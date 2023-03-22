@@ -4,6 +4,11 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.generics import CreateAPIView
+from django.contrib.auth.models import User
+from .serializer import RegisterSerializer
+
+
 
 
 
@@ -24,3 +29,24 @@ class TokenBlacklistView(APIView):
         token = RefreshToken(request.data.get('refresh'))
         token.blacklist()
         return Response("Success")
+
+
+ # User registeration
+
+class RegisterAPIView(generics.GenericAPIView):
+    serializer_class = RegisterSerializer
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = serializer.save()
+
+        response_data = {
+            "message": "User created successfully",
+            "user": {
+                "id": user.id,
+                "username": user.username,
+                "email": user.email
+            }
+        }
+        return Response(response_data)
