@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..models import User,BlogPost
+from ..models import User,BlogPost,Comment
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
 
@@ -63,6 +63,13 @@ class BlogupdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = BlogPost
         fields = ['title','content','image','author']
+
+
+
+class AddcommentsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = '__all__' 
         
 
 

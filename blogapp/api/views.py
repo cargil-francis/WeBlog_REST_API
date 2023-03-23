@@ -6,9 +6,9 @@ from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated,AllowAny,IsAdminUser
 from rest_framework.response import Response
 from rest_framework.generics import CreateAPIView,RetrieveUpdateDestroyAPIView,ListAPIView
-from blogapp.models import BlogPost
+from blogapp.models import BlogPost,Comment
 from django.contrib.auth.models import User
-from .serializer import RegisterSerializer,BlogcreateSerializer,BlogListSerilaizer, BlogupdateSerializer
+from .serializer import RegisterSerializer,BlogcreateSerializer,BlogListSerilaizer,BlogupdateSerializer,AddcommentsSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -95,6 +95,18 @@ class UpdateBlogAPI(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = BlogupdateSerializer
 
 #comment
+
+class AddCommentAPI(generics.CreateAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = AddcommentsSerializer
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
+        return Response(serializer.data)
+        
+
+    
 
     
 
