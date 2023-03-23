@@ -8,6 +8,8 @@ from rest_framework.response import Response
 from rest_framework.generics import CreateAPIView
 from django.contrib.auth.models import User
 from .serializer import RegisterSerializer
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 
@@ -53,4 +55,16 @@ class RegisterAPIView(generics.CreateAPIView):
                 "email": user.email
             }
         }
+        send_mail(
+                'Registeration Successful',
+                'It is to inform that your blog account has been created successfully.Please, login to continue. ',
+                'from@example.com',
+                ['cargil.21pmc117@mariancollege.org'],
+                fail_silently=False,
+            )
         return Response(response_data)
+
+
+#Blog creation
+
+           
