@@ -92,7 +92,10 @@ class UpdateBlogAPI(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
     queryset = BlogPost.objects.all()
     lookup_field = 'id'
-    serializer_class = BlogupdateSerializer()
+    serializer_class = BlogupdateSerializer
+
+#comment
+
     
 
 
