@@ -54,5 +54,17 @@ class BlogcreateSerializer(serializers.ModelSerializer):
         model = BlogPost
         fields = ['title','content','image','author']
 
+class BlogListSerilaizer(serializers.ModelSerializer):
+    class Meta:
+        model = BlogPost
+        fields = '__all__'
+
+class BlogupdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BlogPost
+        fields = ['title','content','image','author']
+        
+
+
 
     
