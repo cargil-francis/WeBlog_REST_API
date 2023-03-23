@@ -1,7 +1,7 @@
 
 
 from django.urls import path
-from .views import RegisterAPIView,CreateblogAPI,UpdateBlogAPI,ListBlogAPI,AddCommentAPI,CommentsAPI,UpdateCommentAPI,AdminUserRegistrationAPIView,AdminListBlog
+from .views import RegisterAPIView,CreateblogAPI,UpdateBlogAPI,ListBlogAPI,AddCommentAPI,CommentsAPI,UpdateCommentAPI,AdminUserRegistrationAPIView,AdminListBlog,AdminDeleteBlogAPI
 
 
 urlpatterns = [
@@ -16,6 +16,6 @@ urlpatterns = [
 
    # path('regadmin/',AdminUserRegistrationAPIView.as_view(),name ='adminregister'),
     path('adminlistblog/',AdminListBlog.as_view(),name = 'listblog'),
-
+    path('admindelete/<int:id>',AdminDeleteBlogAPI.as_view(), name = 'delblogs'),
 
 ]

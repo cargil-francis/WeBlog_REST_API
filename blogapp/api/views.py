@@ -5,7 +5,7 @@ from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated,AllowAny,IsAdminUser
 from rest_framework.response import Response
-from rest_framework.generics import CreateAPIView,RetrieveUpdateDestroyAPIView,ListAPIView
+from rest_framework.generics import CreateAPIView,RetrieveUpdateDestroyAPIView,ListAPIView,DestroyAPIView
 from blogapp.models import BlogPost,Comment
 from django.contrib.auth.models import User
 from .serializer import RegisterSerializer,BlogcreateSerializer,BlogListSerilaizer,BlogupdateSerializer,AddcommentsSerializer,ListcommentsSerializer,updatecommentsSerializer
@@ -150,6 +150,14 @@ class AdminListBlog(ListAPIView):
     permission_classes  = [IsAdminUser]
     serializer_class = AdminlistblogSerializer
     queryset = BlogPost.objects.all()
+
+
+class AdminDeleteBlogAPI(DestroyAPIView):
+    permission_classes  = [IsAdminUser]
+    serializer_class = AdminlistblogSerializer
+    queryset = BlogPost.objects.all()
+    lookup_field = 'id'
+
 
 
 
