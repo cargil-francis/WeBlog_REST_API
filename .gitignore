@@ -153,6 +153,10 @@ dmypy.json
 cython_debug/
 
 
+#images
+ images/
+
+
 
 
 

@@ -7,7 +7,7 @@ from rest_framework.permissions import IsAuthenticated,AllowAny,IsAdminUser
 from rest_framework.response import Response
 from rest_framework.generics import CreateAPIView
 from django.contrib.auth.models import User
-from .serializer import RegisterSerializer
+from .serializer import RegisterSerializer,BlogcreateSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -66,5 +66,18 @@ class RegisterAPIView(generics.CreateAPIView):
 
 
 #Blog creation
+class CreateblogAPI(generics.CreateAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = BlogcreateSerializer
+
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
+        return Response(serializer.data)
+
+
+
+  
 
            
