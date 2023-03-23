@@ -84,6 +84,27 @@ class updatecommentsSerializer(serializers.ModelSerializer):
         fields = ['content']
         
 
+class AdminUserSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'password', 'is_staff')
+
+    def create(self, validated_data):
+        user = User.objects.create_user(
+            username=validated_data['username'],
+            password=validated_data['password'],
+            is_staff=True
+        )
+        return user
+
+
+class AdminlistblogSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = BlogPost
+        fields = '__all__'
 
 
 

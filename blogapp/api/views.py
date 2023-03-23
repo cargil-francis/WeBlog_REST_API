@@ -9,6 +9,7 @@ from rest_framework.generics import CreateAPIView,RetrieveUpdateDestroyAPIView,L
 from blogapp.models import BlogPost,Comment
 from django.contrib.auth.models import User
 from .serializer import RegisterSerializer,BlogcreateSerializer,BlogListSerilaizer,BlogupdateSerializer,AddcommentsSerializer,ListcommentsSerializer,updatecommentsSerializer
+from .serializer import AdminUserSerializer,AdminlistblogSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -129,6 +130,26 @@ class UpdateCommentAPI(generics.RetrieveUpdateDestroyAPIView):
 
     #     return Response(data)
 
+
+
+
+#Admin
+class AdminUserRegistrationAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, format=None):
+        serializer = AdminUserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+class AdminListBlog(ListAPIView):
+    permission_classes  = [IsAdminUser]
+    serializer_class = AdminlistblogSerializer
+    queryset = BlogPost.objects.all()
 
 
 

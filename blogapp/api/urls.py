@@ -1,7 +1,7 @@
 
 
 from django.urls import path
-from .views import RegisterAPIView,CreateblogAPI,UpdateBlogAPI,ListBlogAPI,AddCommentAPI,CommentsAPI,UpdateCommentAPI
+from .views import RegisterAPIView,CreateblogAPI,UpdateBlogAPI,ListBlogAPI,AddCommentAPI,CommentsAPI,UpdateCommentAPI,AdminUserRegistrationAPIView,AdminListBlog
 
 
 urlpatterns = [
@@ -12,7 +12,10 @@ urlpatterns = [
 
     path('addcomments/',AddCommentAPI.as_view(),name ='addcomment'),
     path('comments/<int:id>',CommentsAPI.as_view(), name ='commentlist'),
-    path('updatecomments/<int:id>',UpdateCommentAPI.as_view(), name ='updatecomment')
+    path('updatecomments/<int:id>',UpdateCommentAPI.as_view(), name ='updatecomment'),
+
+   # path('regadmin/',AdminUserRegistrationAPIView.as_view(),name ='adminregister'),
+    path('adminlistblog/',AdminListBlog.as_view(),name = 'listblog'),
 
 
 ]
