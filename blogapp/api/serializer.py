@@ -108,4 +108,12 @@ class AdminlistblogSerializer(serializers.ModelSerializer):
 
 
 
+class AdminlistCommentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Comment
+        fields = '__all__'
+
+
+
     
