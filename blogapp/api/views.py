@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework.generics import CreateAPIView,RetrieveUpdateDestroyAPIView,ListAPIView
 from blogapp.models import BlogPost,Comment
 from django.contrib.auth.models import User
-from .serializer import RegisterSerializer,BlogcreateSerializer,BlogListSerilaizer,BlogupdateSerializer,AddcommentsSerializer
+from .serializer import RegisterSerializer,BlogcreateSerializer,BlogListSerilaizer,BlogupdateSerializer,AddcommentsSerializer,ListcommentsSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -104,7 +104,17 @@ class AddCommentAPI(generics.CreateAPIView):
         serializer.save(author=self.request.user)
 
         return Response(serializer.data)
-        
+
+class CommentsAPI(generics.ListAPIView):
+    permission_classes = [IsAuthenticated]
+    queryset = Comment.objects.all()
+    print(queryset)
+    serializer_class = ListcommentsSerializer
+    lookup_field = 'id'
+
+
+
+
 
     
 
