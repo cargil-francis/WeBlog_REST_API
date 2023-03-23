@@ -1,7 +1,7 @@
 
 
 from django.urls import path
-from .views import RegisterAPIView,CreateblogAPI,UpdateBlogAPI,ListBlogAPI,AddCommentAPI,CommentsAPI
+from .views import RegisterAPIView,CreateblogAPI,UpdateBlogAPI,ListBlogAPI,AddCommentAPI,CommentsAPI,UpdateCommentAPI
 
 
 urlpatterns = [
@@ -12,6 +12,7 @@ urlpatterns = [
 
     path('addcomments/',AddCommentAPI.as_view(),name ='addcomment'),
     path('comments/<int:id>',CommentsAPI.as_view(), name ='commentlist'),
+    path('updatecomments/<int:id>',UpdateCommentAPI.as_view(), name ='updatecomment')
 
 
 ]

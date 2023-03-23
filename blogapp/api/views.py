@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework.generics import CreateAPIView,RetrieveUpdateDestroyAPIView,ListAPIView
 from blogapp.models import BlogPost,Comment
 from django.contrib.auth.models import User
-from .serializer import RegisterSerializer,BlogcreateSerializer,BlogListSerilaizer,BlogupdateSerializer,AddcommentsSerializer,ListcommentsSerializer
+from .serializer import RegisterSerializer,BlogcreateSerializer,BlogListSerilaizer,BlogupdateSerializer,AddcommentsSerializer,ListcommentsSerializer,updatecommentsSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -111,6 +111,25 @@ class CommentsAPI(generics.ListAPIView):
     print(queryset)
     serializer_class = ListcommentsSerializer
     lookup_field = 'id'
+
+class UpdateCommentAPI(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [IsAuthenticated]
+    queryset = Comment.objects.all()
+    lookup_field = 'id'
+    serializer_class = updatecommentsSerializer
+
+    #  def get(self, request):
+    #     user = request.user
+    #     serializer = self.get_serializer(user)
+    #     quizzes = Quiz.objects.filter(created_by=user)    #filter quiz created by user
+    #     quiz_serializer = QuizSerializer(quizzes, many=True)   
+    #     data = {
+    #         'user' : serializer.data,                      
+    #     }
+
+    #     return Response(data)
+
+
 
 
 

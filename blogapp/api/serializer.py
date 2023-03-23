@@ -76,6 +76,12 @@ class ListcommentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = '__all__'
+
+class updatecommentsSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Comment
+        fields = ['content']
         
 
 
