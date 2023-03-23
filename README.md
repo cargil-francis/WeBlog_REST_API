@@ -50,11 +50,11 @@ An Online blogging Application with  Admin and Users. The authorisation is done 
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/cargil-francis/My_Quiz_Application_REST.git
+   git clone https://github.com/cargil-francis/WeBlog_REST_API.git
    ```
 2. CD to project
    ```sh
-   cd My_Quiz_Application_REST
+   cd WeBlog_REST_API
    ```
 
 
@@ -107,20 +107,20 @@ Follow the given steps to run the project in your localhost.
 
 Screenshots of the project using Postman
 *User Registeration
-  ![Screenshot from 2023-03-23 02-07-20](https://user-images.githubusercontent.com/96044398/227236167-9c44ce41-f2e1-435a-859d-b23cfe91519e.png)
+ ![Screenshot from 2023-03-23 02-07-20](https://user-images.githubusercontent.com/96044398/227236167-9c44ce41-f2e1-435a-859d-b23cfe91519e.png)
 *Login Using 
 JWT Token
-  ![Screenshot from 2023-03-23 12-25-38](https://user-images.githubusercontent.com/96044398/227235956-2d3de5bf-830d-433b-9417-74730b63ef24.png)
+![Screenshot from 2023-03-23 12-25-38](https://user-images.githubusercontent.com/96044398/227235956-2d3de5bf-830d-433b-9417-74730b63ef24.png)
 
  
 *Create Blog 
 ![Screenshot from 2023-03-23 13-04-04](https://user-images.githubusercontent.com/96044398/227236510-b3bd7327-62ef-4380-b706-e7580f9a7ccc.png)
 
 
-* List blog
-  ![Screenshot from 2023-03-23 14-25-36](https://user-images.githubusercontent.com/96044398/227235710-d284ed66-5019-4542-ac46-f85e828b0853.png)
+*List blog
+![Screenshot from 2023-03-23 14-25-36](https://user-images.githubusercontent.com/96044398/227235710-d284ed66-5019-4542-ac46-f85e828b0853.png)
 
-* Update Blog
+*Update Blog
 
 
 
@@ -137,21 +137,37 @@ JWT Token
 ## Roadmap
 UserSection
 -[X] User Authentication:a.Users will be able to create an account, log in, and log out.
+
 -[X] Newly registered users should receive an email upon registration.
+
 -[X] Blog Posts:a.Users can perform CRUD operations in their own blog posts.
+
 -[X] Users can view the list & details of all blog posts, including blogs posted byother users.
+
 -[X] Users should be able to upload image attachments with the blog.
+
 -[X] A blog post should have a title, content, created time & updated time. The restof the fields should be added as per requirement.
+
 -[X] Users can add comments to any posts.
+
 -[X] A user should be able to see all the comments that are posted under a blogpost.
+
 -[X] Only the author of the comment will be allowed to edit or delete thecomments.
+
 -[X] The created time & updated time of the comment should be saved.
+
  AdminSection
+ 
 -[X] AdminSection1.Authentication:Admins will be able to log in and log out.
+
 -[X] A new admin user can only be registered by another authenticated adminuser. 
+
 -[X] Blog Posts:Admins can view the list & details of all blog posts.
+
 -[X] Admins should be able to delete blog posts.
+
 -[X] Comments:Admins can view the list of all comments under a post.
+
 -[X] Admins should be able to delete comments.
 
 
