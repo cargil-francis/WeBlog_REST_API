@@ -106,8 +106,11 @@ Follow the given steps to run the project in your localhost.
 ## Usage
 
 Screenshots of the project using Postman
+
 *User Registeration
- ![Screenshot from 2023-03-23 02-07-20](https://user-images.githubusercontent.com/96044398/227236167-9c44ce41-f2e1-435a-859d-b23cfe91519e.png)
+ 
+ ![Screenshot from 2023-03-25 15-46-22](https://user-images.githubusercontent.com/96044398/227735637-3a599214-f194-474c-b97f-3aae2d39b25e.png)
+
 *Login Using 
 JWT Token
 ![Screenshot from 2023-03-23 12-25-38](https://user-images.githubusercontent.com/96044398/227235956-2d3de5bf-830d-433b-9417-74730b63ef24.png)
@@ -118,13 +121,52 @@ JWT Token
 
 
 *List blog
-![Screenshot from 2023-03-23 14-25-36](https://user-images.githubusercontent.com/96044398/227235710-d284ed66-5019-4542-ac46-f85e828b0853.png)
+![Screenshot from 2023-03-23 14-25-36](https://user-![updateblog](https://user-images.githubusercontent.com/96044398/227735425-1f06266a-72de-459f-8b65-5c89fc9fa3c1.png)
+
 
 *Update Blog
+images.githubusercontent.com/96044398/227235710-d284ed66-5019-4542-ac46-f85e828b0853.png)
 
 
+*Add comments
+
+![Screenshot from 2023-03-24 00-18-34](https://user-images.githubusercontent.com/96044398/227736038-5f022d5c-7609-4d32-bfb3-f9be3e0369a5.png)
+
+*List comment using blogid
+
+![Screenshot from 2023-03-25 23-45-19](https://user-images.githubusercontent.com/96044398/227735361-671525b6-c248-4c00-8edb-d1dbe3c0f288.png)
+
+*Update comment
+
+![Screenshot from 2023-03-25 23-50-07](https://user-images.githubusercontent.com/96044398/227735474-62988de8-142f-4fd6-b7c2-450ff4618d3a.png)
+
+
+*Admin list blog
+
+23-03-24 02-12-45](https://user-images.githubusercontent.com/96044398/227735754-bfff069b-83de-499d-b450-14c0313381bf.png)
+
+*Admin delete blog
+
+![Screenshot from 2023-03-26 00-26-58](https://user-images.githubusercontent.com/96044398/227736251-ec3172fa-a5ee-441a-a2c2-cbafe9720ced.png)
+
+![Screenshot from 2023-03-26 00-28-00](https://user-images.githubusercontent.com/96044398/227736258-0ce59c75-9c8c-462c-940e-e64a0537a622.png)
+
+
+*Admin list comment
+
+![Screenshot from 2023-03-24 02-12-45](https://user-images.githubusercontent.com/96044398/227735825-6a9b0a63-a41a-4752-9061-d8869ed99f24.png)
+
+*Admin delete comment
+
+![Screenshot from 2023-03-26 00-30-24](https://user-images.githubusercontent.com/96044398/227736345-dc69989f-f571-47ae-8f48-545866fcce8b.png)
+
+
+*Token refresh
+
+![Screenshot from 2023-03-25 23-53-23](https://user-images.githubusercontent.com/96044398/227735522-71afb5ef-807b-4c4a-857c-62a992a281a7.png)
 
 *Token blacklist
+
 ![Screenshot from 2023-03-03 12-14-50](https://user-images.githubusercontent.com/96044398/222651928-4f8658ef-18c2-4c4c-a966-d0846a4bb7bb.png)
 
 
