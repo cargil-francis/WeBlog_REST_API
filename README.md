@@ -110,22 +110,29 @@ Screenshots of the project using Postman
 *User Registeration
  
  ![Screenshot from 2023-03-25 15-46-22](https://user-images.githubusercontent.com/96044398/227735637-3a599214-f194-474c-b97f-3aae2d39b25e.png)
+  
+*Email
+Ustrash:///Screenshot%20from%202023-03-25%2015-03-17.pnging 
 
-*Login Using 
+*Login 
 JWT Token
+
 ![Screenshot from 2023-03-23 12-25-38](https://user-images.githubusercontent.com/96044398/227235956-2d3de5bf-830d-433b-9417-74730b63ef24.png)
 
  
 *Create Blog 
+
 ![Screenshot from 2023-03-23 13-04-04](https://user-images.githubusercontent.com/96044398/227236510-b3bd7327-62ef-4380-b706-e7580f9a7ccc.png)
 
 
 *List blog
+
 ![Screenshot from 2023-03-23 14-25-36](https://user-![updateblog](https://user-images.githubusercontent.com/96044398/227735425-1f06266a-72de-459f-8b65-5c89fc9fa3c1.png)
 
 
 *Update Blog
-images.githubusercontent.com/96044398/227235710-d284ed66-5019-4542-ac46-f85e828b0853.png)
+
+![updateblog](https://user-images.githubusercontent.com/96044398/227736801-51399fb7-c480-485d-98d7-c95a031205ed.png)
 
 
 *Add comments
@@ -178,39 +185,39 @@ images.githubusercontent.com/96044398/227235710-d284ed66-5019-4542-ac46-f85e828b
 <!-- ROADMAP -->
 ## Roadmap
 UserSection
--[X] User Authentication:a.Users will be able to create an account, log in, and log out.
+-[x]User Authentication:a.Users will be able to create an account, log in, and log out.
 
--[X] Newly registered users should receive an email upon registration.
+-[X]Newly registered users should receive an email upon registration.
 
--[X] Blog Posts:a.Users can perform CRUD operations in their own blog posts.
+-[X]Blog Posts:a.Users can perform CRUD operations in their own blog posts.
 
--[X] Users can view the list & details of all blog posts, including blogs posted byother users.
+-[X]Users can view the list & details of all blog posts, including blogs posted byother users.
 
--[X] Users should be able to upload image attachments with the blog.
+-[X]Users should be able to upload image attachments with the blog.
 
--[X] A blog post should have a title, content, created time & updated time. The restof the fields should be added as per requirement.
+-[X]A blog post should have a title, content, created time & updated time. The restof the fields should be added as per requirement.
 
--[X] Users can add comments to any posts.
+-[X]Users can add comments to any posts.
 
--[X] A user should be able to see all the comments that are posted under a blogpost.
+-[X]A user should be able to see all the comments that are posted under a blogpost.
 
--[X] Only the author of the comment will be allowed to edit or delete thecomments.
+-[X]Only the author of the comment will be allowed to edit or delete thecomments.
 
--[X] The created time & updated time of the comment should be saved.
+-[X]The created time & updated time of the comment should be saved.
 
  AdminSection
  
--[X] AdminSection1.Authentication:Admins will be able to log in and log out.
+-[X]AdminSection1.Authentication:Admins will be able to log in and log out.
 
--[X] A new admin user can only be registered by another authenticated adminuser. 
+-[X]A new admin user can only be registered by another authenticated adminuser. 
 
--[X] Blog Posts:Admins can view the list & details of all blog posts.
+-[X]Blog Posts:Admins can view the list & details of all blog posts.
 
--[X] Admins should be able to delete blog posts.
+-[X]Admins should be able to delete blog posts.
 
--[X] Comments:Admins can view the list of all comments under a post.
+-[X]Comments:Admins can view the list of all comments under a post.
 
--[X] Admins should be able to delete comments.
+-[X]Admins should be able to delete comments.
 
 
 
