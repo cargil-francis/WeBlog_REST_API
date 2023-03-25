@@ -58,7 +58,7 @@ class RegisterAPIView(generics.CreateAPIView):
             }
         }
         send_mail(
-                'Registeration Successful',
+                'Registration Successful',
                 'It is to inform that your blog account has been created successfully.Please, login to continue. ',
                 'from@example.com',
                 [user.email],
