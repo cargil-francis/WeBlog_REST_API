@@ -13,7 +13,7 @@ urlpatterns = [
     path('listblogs/',ListBlogAPI.as_view(),name ='listblog'),
     #comments
     path('addcomments/',AddCommentAPI.as_view(),name ='addcomment'),
-    path('comments/<int:id>',CommentsAPI.as_view(), name ='commentlist'),
+    path('comments/<int:blog_post_id>',CommentsAPI.as_view(), name ='commentlist'),
     path('updatecomments/<int:id>',UpdateCommentAPI.as_view(), name ='updatecomment'),
     #admin blog
     path('adminlistblog/',AdminListBlog.as_view(),name = 'listblog'),

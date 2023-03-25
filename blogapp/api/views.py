@@ -100,6 +100,7 @@ class UpdateBlogAPI(generics.RetrieveUpdateDestroyAPIView):
 class AddCommentAPI(generics.CreateAPIView):
     permission_classes = [IsAuthenticated]
     serializer_class = AddcommentsSerializer
+    lookup_field = 'id'
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
@@ -108,10 +109,22 @@ class AddCommentAPI(generics.CreateAPIView):
 
 class CommentsAPI(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
-    queryset = Comment.objects.all()
-    print(queryset)
+    lookup_field = 'blog_post_id'
+    # queryset = Comment.objects.filter(blog_post_id)
+    #print(queryset)
     serializer_class = ListcommentsSerializer
-    lookup_field = 'id'
+
+    def get_queryset(self):
+        blog_post_id = self.kwargs.get('blog_post_id')
+        print(blog_post_id)
+        return Comment.objects.filter(blog_post_id=blog_post_id)
+
+
+
+
+
+
+    
 
 class UpdateCommentAPI(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
@@ -119,17 +132,7 @@ class UpdateCommentAPI(generics.RetrieveUpdateDestroyAPIView):
     lookup_field = 'id'
     serializer_class = updatecommentsSerializer
 
-    #  def get(self, request):
-    #     user = request.user
-    #     serializer = self.get_serializer(user)
-    #     quizzes = Quiz.objects.filter(created_by=user)    #filter quiz created by user
-    #     quiz_serializer = QuizSerializer(quizzes, many=True)   
-    #     data = {
-    #         'user' : serializer.data,                      
-    #     }
-
-    #     return Response(data)
-
+   
 
 
 

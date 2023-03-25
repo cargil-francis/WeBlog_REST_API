@@ -64,11 +64,12 @@ class BlogListSerilaizer(serializers.ModelSerializer):
 class BlogupdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = BlogPost
-        fields = ['title','content','image','author']
+        fields = ['title','content','image','author','updated_at']
 
 
 
 class AddcommentsSerializer(serializers.ModelSerializer):
+    
     class Meta:
         model = Comment
         fields = '__all__' 
@@ -77,13 +78,13 @@ class ListcommentsSerializer(serializers.ModelSerializer):
  
     class Meta:
         model = Comment
-        fields = '__all__'
+        fields = ['content','blog_post']
 
 class updatecommentsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        fields = ['content']
+        fields = ['content','updated_at']
         
 
 
