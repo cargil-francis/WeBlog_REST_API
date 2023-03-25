@@ -9,7 +9,7 @@ from rest_framework.generics import CreateAPIView,RetrieveUpdateDestroyAPIView,L
 from blogapp.models import BlogPost,Comment
 from django.contrib.auth.models import User
 from .serializer import RegisterSerializer,BlogcreateSerializer,BlogListSerilaizer,BlogupdateSerializer,AddcommentsSerializer,ListcommentsSerializer,updatecommentsSerializer
-from .serializer import AdminUserSerializer,AdminlistblogSerializer,AdminlistCommentSerializer
+from .serializer import AdminlistblogSerializer,AdminlistCommentSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -61,7 +61,7 @@ class RegisterAPIView(generics.CreateAPIView):
                 'Registeration Successful',
                 'It is to inform that your blog account has been created successfully.Please, login to continue. ',
                 'from@example.com',
-                ['cargil.21pmc117@mariancollege.org'],
+                [user.email],
                 fail_silently=False,
             )
         return Response(response_data)
@@ -132,17 +132,6 @@ class UpdateCommentAPI(generics.RetrieveUpdateDestroyAPIView):
 
 
 
-
-#Admin
-class AdminUserRegistrationAPIView(APIView):
-    permission_classes = [IsAuthenticated]
-
-    def post(self, request, format=None):
-        serializer = AdminUserSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 #admin BlogPost
 
