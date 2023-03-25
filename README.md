@@ -186,39 +186,39 @@ JWT Token
 ## Roadmap
 UserSection
 
-- [x]User Authentication:a.Users will be able to create an account, log in, and log out.
+- [x] User Authentication:a.Users will be able to create an account, log in, and log out.
 
-- [X]Newly registered users should receive an email upon registration.
+- [x] Newly registered users should receive an email upon registration.
 
-- [X]Blog Posts:a.Users can perform CRUD operations in their own blog posts.
+- [x] Blog Posts:a.Users can perform CRUD operations in their own blog posts.
 
-- [X]Users can view the list & details of all blog posts, including blogs posted byother users.
+- [x] Users can view the list & details of all blog posts, including blogs posted byother users.
 
-- [X]Users should be able to upload image attachments with the blog.
+- [x] Users should be able to upload image attachments with the blog.
 
-- [X]A blog post should have a title, content, created time & updated time. The restof the fields should be added as per requirement.
+- [x] A blog post should have a title, content, created time & updated time. The restof the fields should be added as per requirement.
 
-- [X]Users can add comments to any posts.
+- [x] Users can add comments to any posts.
 
-- [X]A user should be able to see all the comments that are posted under a blogpost.
+- [x] A user should be able to see all the comments that are posted under a blogpost.
 
-- [X]Only the author of the comment will be allowed to edit or delete thecomments.
+- [x] Only the author of the comment will be allowed to edit or delete thecomments.
 
-- [X]The created time & updated time of the comment should be saved.
+- [x] The created time & updated time of the comment should be saved.
 
  AdminSection
  
-- [X]AdminSection1.Authentication:Admins will be able to log in and log out.
+- [x] AdminSection1.Authentication:Admins will be able to log in and log out.
 
-- [X]A new admin user can only be registered by another authenticated adminuser. 
+- [x] A new admin user can only be registered by another authenticated adminuser. 
 
-- [X]Blog Posts:Admins can view the list & details of all blog posts.
+- [x] Blog Posts:Admins can view the list & details of all blog posts.
 
-- [X]Admins should be able to delete blog posts.
+- [x] Admins should be able to delete blog posts.
 
-- [X]Comments:Admins can view the list of all comments under a post.
+- [x] Comments:Admins can view the list of all comments under a post.
 
-- [X]Admins should be able to delete comments.
+- [x] Admins should be able to delete comments.
 
 
 
