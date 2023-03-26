@@ -28,7 +28,7 @@
 ## About The Project
 
 WeBlog  is a python project created using DjangoRestframework.
-An Online blogging Application with  Admin and Users. The authorisation is done using the jwt barer tokenisation .Various features like email ,user profile are included in this project
+An Online blogging Application with  Admin and Users. The authorisation is done using the jwt bearer tokenisation .Various features like email ,user profile are included in this project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
