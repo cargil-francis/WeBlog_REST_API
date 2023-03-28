@@ -112,7 +112,9 @@ Screenshots of the project using Postman
  ![Screenshot from 2023-03-25 15-46-22](https://user-images.githubusercontent.com/96044398/227735637-3a599214-f194-474c-b97f-3aae2d39b25e.png)
   
 *Email
-Ustrash:///Screenshot%20from%202023-03-25%2015-03-17.pnging 
+
+ ![Screenshot from 2023-03-25 15-04-09](https://user-images.githubusercontent.com/96044398/228198915-8646148d-2b8f-46c2-9d59-c2f460cc853b.png)
+
 
 *Login 
 JWT Token
@@ -150,7 +152,8 @@ JWT Token
 
 *Admin list blog
 
-23-03-24 02-12-45](https://user-images.githubusercontent.com/96044398/227735754-bfff069b-83de-499d-b450-14c0313381bf.png)
+![Screenshot from 2023-03-26 00-28-00](https://user-images.githubusercontent.com/96044398/228199790-78d0cff5-e89e-41eb-8d5c-69f97b01f438.png)
+
 
 *Admin delete blog
 
